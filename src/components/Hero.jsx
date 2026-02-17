@@ -1,17 +1,32 @@
+import heroImage from "../assets/hero.jpg";
+
 function Hero() {
   return (
-    <section className="text-center py-24 px-6 bg-gradient-to-b from-black to-gray-900">
-      <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-        Elevate Your Style
-      </h2>
+    <section
+      className="relative h-screen flex items-center justify-center text-center"
+      style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <p className="text-gray-400 mb-8">
-        Future Fashion Awaits
-      </p>
+      {/* Content */}
+      <div className="relative z-10 text-white px-6">
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+          ELEVATE <br /> YOUR STYLE
+        </h2>
 
-      <button className="bg-white text-black px-8 py-3 font-semibold rounded hover:bg-gray-300 transition">
-        SHOP NOW
-      </button>
+        <p className="text-gray-300 mb-8">
+          FUTURE FASHION AWAITS
+        </p>
+
+        <button className="bg-white text-black px-8 py-3 font-semibold rounded hover:bg-gray-300 transition">
+          SHOP NOW
+        </button>
+      </div>
     </section>
   );
 }

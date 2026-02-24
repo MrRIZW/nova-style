@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import { CartProvider } from "./context/CartContext";
 import Mens from "./pages/Mens";
 import Womens from "./pages/Womens";
+import Accessories from "./pages/Accessories";
 function App() {
   return (
     <CartProvider>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/new-arrivals" element={<NewArrivals />} />
           <Route path="/mens" element={<Mens />} />
           <Route path="/womens" element={<Womens />} />
+          <Route path="/accessories" element={<Accessories />} />
 
           {/* Product Details Page */}
           <Route path="/product/:id" element={<ProductDetails />} />

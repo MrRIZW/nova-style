@@ -29,7 +29,7 @@ function Navbar() {
           <Link to="/womens" className="hover:text-gray-400">
             WOMENS
           </Link>
-          <Link to="/" className="hover:text-gray-400">
+          <Link to="/accessories" className="hover:text-gray-400">
             ACCESSORIES
           </Link>
           <Link to="/" className="hover:text-gray-400">

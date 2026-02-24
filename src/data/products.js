@@ -22,6 +22,12 @@ import womensHandbag from "../assets/womens-handbag.jpg";
 import skirt from "../assets/skirt.jpg";
 import womensSneaker from "../assets/womens-sneaker.jpg";
 
+import cap from "../assets/cap.jpg";
+import belt from "../assets/belt.jpg";
+import wallet from "../assets/wallet.jpg";
+import bracelet from "../assets/bracelet.jpg";
+import ring from "../assets/ring.jpg";
+
 const products = [
   {
     id: 1,
@@ -174,6 +180,46 @@ const products = [
   image: womensSneaker,
   description: "Casual everyday sneakers for women.",
   category: "womens"
+},
+{
+  id: 20,
+  name: "Urban Street Cap",
+  price: 699,
+  image: cap,
+  description: "Stylish everyday cap.",
+  category: "accessories"
+},
+{
+  id: 21,
+  name: "Classic Leather Belt",
+  price: 999,
+  image: belt,
+  description: "Premium quality leather belt.",
+  category: "accessories"
+},
+{
+  id: 22,
+  name: "Minimal Wallet",
+  price: 1199,
+  image: wallet,
+  description: "Slim and elegant wallet.",
+  category: "accessories"
+},
+{
+  id: 23,
+  name: "Modern Metal Bracelet",
+  price: 1499,
+  image: bracelet,
+  description: "Trendy stainless steel bracelet.",
+  category: "accessories"
+},
+{
+  id: 24,
+  name: "Luxury Silver Ring",
+  price: 1799,
+  image: ring,
+  description: "Premium silver ring with modern design.",
+  category: "accessories"
 }
 ];
 export default products;

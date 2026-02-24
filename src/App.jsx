@@ -10,11 +10,13 @@ import { CartProvider } from "./context/CartContext";
 import Mens from "./pages/Mens";
 import Womens from "./pages/Womens";
 import Accessories from "./pages/Accessories";
+import Contact from "./pages/Contact";
+import Faqs from "./pages/Faqs";
 function App() {
   return (
     <CartProvider>
       <Router>
-        <ScrollToTop />   
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
@@ -32,6 +34,8 @@ function App() {
 
           {/* Cart Page */}
           <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faqs" element={<Faqs />} />
         </Routes>
 
         <Footer />

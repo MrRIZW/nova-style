@@ -4,17 +4,15 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="bg-black text-gray-400 border-t border-gray-800">
-      
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-10">
-        
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold text-white tracking-widest mb-4">
             NOVA
           </h2>
           <p className="text-sm leading-relaxed">
-            Elevate your style with premium fashion.
-            Designed for the modern generation.
+            Elevate your style with premium fashion. Designed for the modern
+            generation.
           </p>
         </div>
 
@@ -22,10 +20,26 @@ function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-4">SHOP</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/new-arrivals" className="hover:text-white transition">New Arrivals</Link></li>
-            <li><Link to="/mens" className="hover:text-white transition">Mens</Link></li>
-            <li><Link to="/womens" className="hover:text-white transition">Womens</Link></li>
-            <li><Link to="/accessories" className="hover:text-white transition">Accessories</Link></li>
+            <li>
+              <Link to="/new-arrivals" className="hover:text-white transition">
+                New Arrivals
+              </Link>
+            </li>
+            <li>
+              <Link to="/mens" className="hover:text-white transition">
+                Mens
+              </Link>
+            </li>
+            <li>
+              <Link to="/womens" className="hover:text-white transition">
+                Womens
+              </Link>
+            </li>
+            <li>
+              <Link to="/accessories" className="hover:text-white transition">
+                Accessories
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -33,8 +47,17 @@ function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-4">SUPPORT</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-            <li><a href="#" className="hover:text-white transition">FAQs</a></li>
+            <li>
+              <Link to="/contact" className="hover:text-white transition">
+                Contact Us
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/faqs" className="hover:text-white transition">
+                FAQs
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -61,7 +84,6 @@ function Footer() {
       {/* Bottom Section */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          
           <p className="text-sm">
             © {new Date().getFullYear()} NOVA. All rights reserved.
           </p>
@@ -81,10 +103,8 @@ function Footer() {
               <FaGithub />
             </a>
           </div>
-
         </div>
       </div>
-
     </footer>
   );
 }

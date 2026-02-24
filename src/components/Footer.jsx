@@ -5,7 +5,6 @@ function Footer() {
   return (
     <footer className="bg-black text-gray-400 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-10">
-        {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold text-white tracking-widest mb-4">
             NOVA
@@ -16,7 +15,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Shop Links */}
         <div>
           <h3 className="text-white font-semibold mb-4">SHOP</h3>
           <ul className="space-y-2 text-sm">
@@ -43,7 +41,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Support */}
         <div>
           <h3 className="text-white font-semibold mb-4">SUPPORT</h3>
           <ul className="space-y-2 text-sm">
@@ -61,7 +58,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Newsletter */}
         <div>
           <h3 className="text-white font-semibold mb-4">NEWSLETTER</h3>
           <p className="text-sm mb-4">
@@ -81,14 +77,12 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm">
             © {new Date().getFullYear()} NOVA. All rights reserved.
           </p>
 
-          {/* Social Icons */}
           <div className="flex gap-4 text-white">
             <a href="#" className="hover:text-gray-400 transition">
               <FaInstagram />

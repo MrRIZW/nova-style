@@ -18,26 +18,17 @@ function App() {
       <Router>
         <ScrollToTop />
         <Navbar />
-
         <Routes>
-          {/* Home Page */}
           <Route path="/" element={<Home />} />
-
-          {/* New Arrivals Page */}
           <Route path="/new-arrivals" element={<NewArrivals />} />
           <Route path="/mens" element={<Mens />} />
           <Route path="/womens" element={<Womens />} />
           <Route path="/accessories" element={<Accessories />} />
-
-          {/* Product Details Page */}
           <Route path="/product/:id" element={<ProductDetails />} />
-
-          {/* Cart Page */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<Faqs />} />
         </Routes>
-
         <Footer />
       </Router>
     </CartProvider>

@@ -15,7 +15,6 @@ function NewArrivals() {
     <div className="bg-black text-white min-h-screen px-6 py-16">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
             <h1 className="text-4xl font-bold tracking-wide">
@@ -26,7 +25,6 @@ function NewArrivals() {
             </p>
           </div>
 
-          {/* Sort Dropdown */}
           <div className="mt-6 md:mt-0">
             <select
               value={sortOption}
@@ -40,14 +38,13 @@ function NewArrivals() {
           </div>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {sortedProducts.map((product) => (
             <div
               key={product.id}
               className="group border border-gray-800 p-4 hover:border-gray-600 transition"
             >
-              {/* Image */}
+
               <div className="overflow-hidden">
                 <img
                   src={product.image}
@@ -56,7 +53,6 @@ function NewArrivals() {
                 />
               </div>
 
-              {/* Product Info */}
               <div className="mt-4">
                 <h2 className="font-semibold text-lg">
                   {product.name}

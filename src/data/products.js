@@ -2,18 +2,14 @@ import jacket from "../assets/jacket.jpg";
 import dress from "../assets/dress.jpg";
 import sneaker from "../assets/sneaker.jpg";
 import sunglasses from "../assets/sunglasses.jpg";
-
-// 👉 Add new images in assets folder
 import hoodie from "../assets/hoodie.jpg";
 import tshirt from "../assets/tshirt.jpg";
 import bag from "../assets/bag.jpg";
 import watch from "../assets/watch.jpg";
-
 import sportsJacket from "../assets/sports-jacket.jpg";
 import jeans from "../assets/jeans.jpg";
 import polo from "../assets/polo.jpg";
 import runnerSneaker from "../assets/runner-sneaker.jpg";
-
 import womensTop from "../assets/womens-top.jpg";
 import womensJeans from "../assets/womens-jeans.jpg";
 import womensJacket from "../assets/womens-jacket.jpg";
@@ -21,7 +17,6 @@ import heels from "../assets/heels.jpg";
 import womensHandbag from "../assets/womens-handbag.jpg";
 import skirt from "../assets/skirt.jpg";
 import womensSneaker from "../assets/womens-sneaker.jpg";
-
 import cap from "../assets/cap.jpg";
 import belt from "../assets/belt.jpg";
 import wallet from "../assets/wallet.jpg";

@@ -4,32 +4,32 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section
-      className="relative h-screen flex items-center justify-center text-center"
+      className="relative min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: `url(${heroImage})`, // ✅ fixed typo
+        backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
 
-      {/* Content */}
-      <div className="relative z-10 text-white px-6">
-        <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
-          ELEVATE <br /> YOUR STYLE
-        </h2>
+      <div className="relative z-10 max-w-4xl mx-auto text-center px-6 text-white">
+        
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-wide mb-6">
+          Elevate <br className="hidden md:block" />
+          Your Style
+        </h1>
 
-        <p className="text-gray-300 mb-8">
-          FUTURE FASHION AWAITS
+        <p className="text-lg md:text-xl text-gray-300 mb-10">
+          Discover timeless designs crafted for the modern generation.
         </p>
 
-        {/* ✅ Redirect to New Arrivals */}
         <Link to="/new-arrivals">
-          <button className="bg-white text-black px-8 py-3 font-semibold rounded hover:bg-gray-300 transition">
-            SHOP NOW
+          <button className="bg-white text-black px-10 py-3 text-sm md:text-base font-semibold rounded-full hover:bg-gray-200 transition duration-300 ease-in-out shadow-lg">
+            Shop Now
           </button>
         </Link>
+
       </div>
     </section>
   );

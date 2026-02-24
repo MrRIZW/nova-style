@@ -5,21 +5,17 @@ import { useCart } from "../context/CartContext";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { cart } = useCart();
-
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-
   return (
     <nav className="bg-black text-white border-b border-gray-800">
       <div className="flex justify-between items-center px-6 py-4">
         
-        {/* Logo */}
         <Link to="/">
           <h1 className="text-2xl font-bold tracking-widest cursor-pointer">
             NOVA
           </h1>
         </Link>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-sm items-center">
 
           <li>
@@ -65,7 +61,6 @@ function Navbar() {
 
         </ul>
 
-        {/* Mobile Menu Button */}
         <div
           className="md:hidden text-xl cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -74,7 +69,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col gap-4 px-6 pb-4 text-sm">
 

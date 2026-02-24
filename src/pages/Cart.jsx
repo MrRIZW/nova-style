@@ -28,7 +28,6 @@ function Cart() {
         ) : (
           <div className="grid md:grid-cols-3 gap-10">
 
-            {/* Cart Items */}
             <div className="md:col-span-2 space-y-6">
 
               {cart.map((item) => (
@@ -36,14 +35,13 @@ function Cart() {
                   key={item.id}
                   className="flex gap-6 border border-gray-800 p-6"
                 >
-                  {/* Product Image */}
+
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-24 h-24 object-cover"
                   />
 
-                  {/* Product Details */}
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold mb-2">
                       {item.name}
@@ -56,7 +54,6 @@ function Cart() {
                     </p>
                   </div>
 
-                  {/* Remove Button */}
                   <button
                     onClick={() => removeFromCart(item.id)}
                     className="text-red-500 hover:text-red-400 transition text-sm"
@@ -68,7 +65,6 @@ function Cart() {
 
             </div>
 
-            {/* Order Summary */}
             <div className="border border-gray-800 p-8 h-fit">
               <h2 className="text-xl font-semibold mb-6">
                 Order Summary

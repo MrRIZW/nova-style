@@ -5,37 +5,49 @@ import { Link } from "react-router-dom";
 
 function Collections() {
   const items = [
-    { title: "MEN'S COLLECTION", image: men, path: "/mens" },
-    { title: "WOMEN'S COLLECTION", image: women, path: "/womens" },
-    { title: "NEW ARRIVALS", image: shoes, path: "/new-arrivals" },
+    { title: "Men's Collection", image: men, path: "/mens" },
+    { title: "Women's Collection", image: women, path: "/womens" },
+    { title: "New Arrivals", image: shoes, path: "/new-arrivals" },
   ];
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="relative h-80 rounded overflow-hidden group"
-        >
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-          />
-
-          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white">
-            <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-
-            {/* ✅ Redirect Button */}
-            <Link to={item.path}>
-              <button className="bg-white text-black px-4 py-2 font-semibold rounded hover:bg-gray-200 transition">
-                SHOP NOW
-              </button>
-            </Link>
-
-          </div>
+    <section className="bg-black text-white py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold tracking-wide">
+            Explore Our Collections
+          </h2>
+          <p className="text-gray-400 mt-4 text-lg">
+            Discover premium styles curated just for you.
+          </p>
         </div>
-      ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end items-center text-center p-8">
+                <h3 className="text-2xl font-semibold mb-4 tracking-wide">
+                  {item.title}
+                </h3>
+
+                <Link to={item.path}>
+                  <button className="bg-white text-black px-6 py-2 font-semibold rounded-full hover:bg-gray-200 transition duration-300">
+                    Shop Now
+                  </button>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 }

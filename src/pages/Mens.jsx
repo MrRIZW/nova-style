@@ -19,7 +19,6 @@ function Mens() {
     <div className="bg-black text-white min-h-screen px-6 py-16">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
             <h1 className="text-4xl font-bold tracking-wide">
@@ -30,7 +29,6 @@ function Mens() {
             </p>
           </div>
 
-          {/* Sort Dropdown */}
           <div className="mt-6 md:mt-0">
             <select
               value={sortOption}
@@ -44,7 +42,6 @@ function Mens() {
           </div>
         </div>
 
-        {/* Products Grid */}
         {mensProducts.length === 0 ? (
           <div className="text-center text-gray-400 py-20 border border-gray-800">
             No products found in this category.
@@ -56,7 +53,7 @@ function Mens() {
                 key={product.id}
                 className="group border border-gray-800 p-4 hover:border-gray-600 transition"
               >
-                {/* Image */}
+
                 <div className="overflow-hidden">
                   <img
                     src={product.image}
@@ -65,7 +62,6 @@ function Mens() {
                   />
                 </div>
 
-                {/* Product Info */}
                 <div className="mt-4">
                   <h2 className="font-semibold text-lg">
                     {product.name}

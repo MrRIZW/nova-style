@@ -1,22 +1,18 @@
 import products from "../data/products";
 import { Link } from "react-router-dom";
 
-function Trending() {
-
-  // 🔥 Only show first 4 products
-  const trendingProducts = products.slice(0, 4);
-
+function NewArrivals() {
   return (
-    <div className="bg-black text-white py-16 px-6">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        TRENDING NOW
-      </h2>
+    <div className="bg-black text-white min-h-screen px-6 py-12">
+      <h1 className="text-3xl font-bold text-center mb-12">
+        NEW ARRIVALS
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {trendingProducts.map((product) => (
+        {products.map((product) => (   // 🔥 Shows ALL products
           <div
             key={product.id}
-            className="bg-gray-900 rounded-xl p-4 hover:scale-105 transition"
+            className="bg-gray-900 p-4 rounded-xl hover:scale-105 transition"
           >
             <img
               src={product.image}
@@ -24,11 +20,13 @@ function Trending() {
               className="w-full h-64 object-cover rounded-lg"
             />
 
-            <h3 className="mt-4 text-lg font-semibold">
+            <h2 className="mt-4 font-semibold">
               {product.name}
-            </h3>
+            </h2>
 
-            <p className="text-gray-400">₹{product.price}</p>
+            <p className="text-gray-400">
+              ₹{product.price}
+            </p>
 
             <Link to={`/product/${product.id}`}>
               <button className="mt-4 w-full bg-white text-black py-2 rounded-lg hover:bg-gray-200 transition">
@@ -42,4 +40,4 @@ function Trending() {
   );
 }
 
-export default Trending;
+export default NewArrivals;

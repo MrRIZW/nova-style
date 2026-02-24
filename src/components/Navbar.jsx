@@ -26,7 +26,7 @@ function Navbar() {
           <Link to="/mens" className="hover:text-gray-400">
             MENS
           </Link>
-          <Link to="/" className="hover:text-gray-400">
+          <Link to="/womens" className="hover:text-gray-400">
             WOMENS
           </Link>
           <Link to="/" className="hover:text-gray-400">

@@ -14,6 +14,14 @@ import jeans from "../assets/jeans.jpg";
 import polo from "../assets/polo.jpg";
 import runnerSneaker from "../assets/runner-sneaker.jpg";
 
+import womensTop from "../assets/womens-top.jpg";
+import womensJeans from "../assets/womens-jeans.jpg";
+import womensJacket from "../assets/womens-jacket.jpg";
+import heels from "../assets/heels.jpg";
+import womensHandbag from "../assets/womens-handbag.jpg";
+import skirt from "../assets/skirt.jpg";
+import womensSneaker from "../assets/womens-sneaker.jpg";
+
 const products = [
   {
     id: 1,
@@ -110,6 +118,62 @@ const products = [
   image: runnerSneaker,
   description: "High performance sneakers for everyday wear.",
   category: "mens"
+},
+{
+  id: 13,
+  name: "Elegant Summer Top",
+  price: 1299,
+  image: womensTop,
+  description: "Lightweight stylish summer top.",
+  category: "womens"
+},
+{
+  id: 14,
+  name: "Slim Fit Women Jeans",
+  price: 1999,
+  image: womensJeans,
+  description: "Stretchable slim fit denim jeans.",
+  category: "womens"
+},
+{
+  id: 15,
+  name: "Modern Cropped Jacket",
+  price: 2499,
+  image: womensJacket,
+  description: "Trendy cropped jacket for modern style.",
+  category: "womens"
+},
+{
+  id: 16,
+  name: "Luxury High Heels",
+  price: 2899,
+  image: heels,
+  description: "Premium party wear heels.",
+  category: "womens"
+},
+{
+  id: 17,
+  name: "Designer Handbag",
+  price: 3199,
+  image: womensHandbag,
+  description: "Elegant handbag for daily and party use.",
+  category: "womens"
+},
+{
+  id: 18,
+  name: "Classic Midi Skirt",
+  price: 1499,
+  image: skirt,
+  description: "Comfortable and stylish midi skirt.",
+  category: "womens"
+},
+{
+  id: 19,
+  name: "Urban Women Sneakers",
+  price: 2299,
+  image: womensSneaker,
+  description: "Casual everyday sneakers for women.",
+  category: "womens"
 }
 ];
 export default products;

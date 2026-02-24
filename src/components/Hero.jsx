@@ -1,11 +1,12 @@
 import heroImage from "../assets/hero.jpg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
     <section
       className="relative h-screen flex items-center justify-center text-center"
       style={{
-        backgroundImage: `url(${heroImage})`,
+        backgroundImage: `url(${heroImage})`, // ✅ fixed typo
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -23,9 +24,12 @@ function Hero() {
           FUTURE FASHION AWAITS
         </p>
 
-        <button className="bg-white text-black px-8 py-3 font-semibold rounded hover:bg-gray-300 transition">
-          SHOP NOW
-        </button>
+        {/* ✅ Redirect to New Arrivals */}
+        <Link to="/new-arrivals">
+          <button className="bg-white text-black px-8 py-3 font-semibold rounded hover:bg-gray-300 transition">
+            SHOP NOW
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -38,6 +38,16 @@ function Trending() {
           </div>
         ))}
       </div>
+
+      {/* ✅ View More Button */}
+      <div className="flex justify-center mt-12">
+        <Link to="/new-arrivals">
+          <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+            VIEW MORE
+          </button>
+        </Link>
+      </div>
+
     </div>
   );
 }

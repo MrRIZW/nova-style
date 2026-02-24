@@ -11,6 +11,7 @@ function Navbar() {
   return (
     <nav className="bg-black text-white border-b border-gray-800">
       <div className="flex justify-between items-center px-6 py-4">
+        
         {/* Logo */}
         <Link to="/">
           <h1 className="text-2xl font-bold tracking-widest cursor-pointer">
@@ -20,31 +21,48 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-sm items-center">
-          <Link to="/new-arrivals" className="hover:text-gray-400">
-            NEW ARRIVALS
-          </Link>
-          <Link to="/mens" className="hover:text-gray-400">
-            MENS
-          </Link>
-          <Link to="/womens" className="hover:text-gray-400">
-            WOMENS
-          </Link>
-          <Link to="/accessories" className="hover:text-gray-400">
-            ACCESSORIES
-          </Link>
-          <Link to="/" className="hover:text-gray-400">
-            SALE
-          </Link>
 
-          {/* Cart */}
-          <Link to="/cart" className="relative hover:text-gray-400">
-            CART
-            {totalItems > 0 && (
-              <span className="absolute -top-2 -right-4 bg-white text-black text-xs px-2 py-0.5 rounded-full">
-                {totalItems}
-              </span>
-            )}
-          </Link>
+          <li>
+            <Link to="/" className="hover:text-gray-400 transition">
+              HOME
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/new-arrivals" className="hover:text-gray-400 transition">
+              NEW ARRIVALS
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/mens" className="hover:text-gray-400 transition">
+              MENS
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/womens" className="hover:text-gray-400 transition">
+              WOMENS
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/accessories" className="hover:text-gray-400 transition">
+              ACCESSORIES
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/cart" className="relative hover:text-gray-400 transition">
+              CART
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-4 bg-white text-black text-xs px-2 py-0.5 rounded-full">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+          </li>
+
         </ul>
 
         {/* Mobile Menu Button */}
@@ -59,25 +77,31 @@ function Navbar() {
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col gap-4 px-6 pb-4 text-sm">
-          <Link to="/new-arrivals" className="hover:text-gray-400">
+
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            HOME
+          </Link>
+
+          <Link to="/new-arrivals" onClick={() => setMenuOpen(false)}>
             NEW ARRIVALS
           </Link>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
+
+          <Link to="/mens" onClick={() => setMenuOpen(false)}>
             MENS
           </Link>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
+
+          <Link to="/womens" onClick={() => setMenuOpen(false)}>
             WOMENS
           </Link>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
+
+          <Link to="/accessories" onClick={() => setMenuOpen(false)}>
             ACCESSORIES
-          </Link>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            SALE
           </Link>
 
           <Link to="/cart" onClick={() => setMenuOpen(false)}>
             CART ({totalItems})
           </Link>
+
         </div>
       )}
     </nav>

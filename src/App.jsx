@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import NewArrivals from "./pages/NewArrivals";
 import ProductDetails from "./pages/ProductDetails";
@@ -13,6 +14,7 @@ function App() {
   return (
     <CartProvider>
       <Router>
+        <ScrollToTop />   
         <Navbar />
 
         <Routes>
